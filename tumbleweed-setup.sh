@@ -31,7 +31,7 @@ sudo zypper dup --from packman --allow-vendor-change
 
 
 # tumbleweed wine repo for the most up to date version
-"Add tumbleweed WINE repo..."
+echo "Add tumbleweed WINE repo..."
 sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:Wine/openSUSE_Tumbleweed/Emulators:Wine.repo
 sudo zypper refresh
 
