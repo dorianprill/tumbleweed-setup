@@ -47,7 +47,7 @@ sudo zypper refresh
 
 
 # packages to install from official and newly added repos
-packages = "htop gparted wine winetricks code teams"
+packages="htop gparted wine winetricks code teams"
 sudo zypper in $packages
 
 
