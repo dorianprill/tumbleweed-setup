@@ -16,16 +16,12 @@ sudo zypper addlock PackageKit
 echo "Disable optional dependencies by default..."
 sudo sed -i 's/solver.onlyRequires = false/solver.onlyRequires = true/g' /etc/zypp/zypp.conf
 
-# now we can start update and installion 
-echo "Refresh, update distro and install packages from official repo..."
-sudo zypper ref
-sudo zypper dup
-
+sudo zypper refresh
 
 # add additional repos and their packages
 
 # OpenSUSE packman
-"Add opensuse packman repo..."
+"Add opensuse packman repo and update distribution"
 sudo zypper ar -cfp 90 https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/ packman
 sudo zypper dup --from packman --allow-vendor-change
 
@@ -47,7 +43,7 @@ sudo zypper refresh
 
 
 # packages to install from official and newly added repos
-packages="htop gparted wine winetricks code teams"
+packages="htop gparted wine winetricks vlc code teams"
 sudo zypper in $packages
 
 
