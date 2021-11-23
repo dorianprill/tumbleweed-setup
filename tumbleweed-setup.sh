@@ -2,7 +2,7 @@
 
 # first of all get rid of the osbtructive, broken garbage that is packagekit
 # it is locking up zypper constantly on a fresh install, so you cant even use zypper ffs
-echo "Nuke PackageKit ... BEGONE!"
+echo "Nuke PackageKit... BEGONE!"
 sudo systemctl disable packagekit
 sudo systemctl stop packagekit
 sudo systemctl mask packagekit
@@ -39,7 +39,10 @@ sudo zypper addrepo https://packages.microsoft.com/yumrepos/vscode vscode
 sudo zypper addrepo https://packages.microsoft.com/yumrepos/ms-teams/ ms-teams
 sudo zypper refresh
 
-
+# install the OpenBuildSystem package installer
+echo "Install codecs from OBS..."
+sudo zypper in opi
+opi codecs
 
 
 # packages to install from official and newly added repos
