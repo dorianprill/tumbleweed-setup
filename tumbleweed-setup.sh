@@ -46,7 +46,7 @@ opi codecs
 
 
 # packages to install from official and newly added repos
-packages="htop gparted wine winetricks vlc code teams"
+packages="htop gparted hardinfo wine winetricks lutris vlc code teams"
 sudo zypper in $packages
 
 
