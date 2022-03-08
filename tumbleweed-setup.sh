@@ -14,7 +14,7 @@ sudo zypper addlock PackageKit
 
 # disable optional dependencies by default, heck that's why they're called OPTIONAL
 echo "Disable optional dependencies by default..."
-sudo sed -i 's/solver.onlyRequires = false/solver.onlyRequires = true/g' /etc/zypp/zypp.conf
+sudo sed -i 's/# solver.onlyRequires = false/solver.onlyRequires = true/g' /etc/zypp/zypp.conf
 
 sudo zypper refresh
 
