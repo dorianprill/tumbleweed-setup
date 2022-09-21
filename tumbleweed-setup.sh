@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# first of all get rid of the osbtructive, broken garbage that is packagekit
+# first of all get rid of the obstructive broken garbage that is packagekit
 # it is locking up zypper constantly on a fresh install, so you cant even use zypper ffs
 echo "Nuke PackageKit... BEGONE!"
 sudo systemctl disable packagekit
@@ -31,22 +31,26 @@ echo "Add tumbleweed WINE repo..."
 sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:Wine/openSUSE_Tumbleweed/Emulators:Wine.repo
 sudo zypper refresh
 
-
-# Microsoft VSCode and Teams
-echo "Addrepo vscode..."
+# Microsoft VSCode and Teams repos
+echo " Add microsoft's repos..."
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo zypper addrepo https://packages.microsoft.com/yumrepos/vscode vscode
 sudo zypper addrepo https://packages.microsoft.com/yumrepos/ms-teams/ ms-teams
 sudo zypper refresh
 
-# install the OpenBuildSystem package installer
-echo "Install codecs from OBS..."
+# Add GitHub's own RPM repo
+echo "Add github's repo..."
+sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo zypper refresh
+
+echo "Install OpenBuildSystem Package Installer (OPI)..."
 sudo zypper in opi
+echo "Use OPI to install the codec pack (incl. non-free)..."
 opi codecs
 
 
 # packages to install from official and newly added repos
-packages="htop gparted hardinfo wine winetricks lutris vlc code teams"
+packages="htop gparted hardinfo wine winetricks lutris vlc code teams git gh"
 sudo zypper in $packages
 
 
