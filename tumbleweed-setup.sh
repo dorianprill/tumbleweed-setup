@@ -50,7 +50,8 @@ opi codecs
 
 
 # packages to install from official and newly added repos
-packages="htop gparted hardinfo wine winetricks lutris vlc code teams git gh helix"
+packages="htop gparted hardinfo wine winetricks lutris vlc code teams gcc git gh helix"
 sudo zypper in $packages
 
-
+# add rustup / cargo 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
