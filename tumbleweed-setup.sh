@@ -50,7 +50,7 @@ opi codecs
 
 
 # packages to install from official and newly added repos
-packages="htop gparted hardinfo wine winetricks lutris vlc code teams git gh"
+packages="htop gparted hardinfo wine winetricks lutris vlc code teams git gh helix"
 sudo zypper in $packages
 
 
