@@ -46,7 +46,7 @@ opi codecs
 
 
 # packages to install from official and newly added repos
-packages="htop gparted hardinfo wine winetricks lutris vlc code gcc git gh helix inkscape xournalpp texlive texlive-latexmk texlive-pgf texlive-biblatex texlive-beamer texlive-beamertheme-metropolis texlive-listings texlive-listingsutf8 texlive-csquotes"
+packages="htop gparted hardinfo wine winetricks lutris vlc code gcc git gh helix inkscape xournalpp texlive texlive-latexmk texlive-pgf texlive-biblatex texlive-beamer texlive-beamertheme-metropolis texlive-listings texlive-listingsutf8 texlive-csquotes texlive-babel-german texlive-german"
 sudo zypper in $packages
 
 # add rustup / cargo 
