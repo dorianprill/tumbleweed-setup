@@ -3,11 +3,8 @@
 # first of all get rid of the obstructive broken garbage that is packagekit
 # it is locking up zypper constantly on a fresh install, so you cant even use zypper ffs
 echo "Nuke PackageKit... BEGONE!"
-sudo systemctl disable packagekit
 sudo systemctl stop packagekit
 sudo systemctl mask packagekit
-sudo killall packagekitd
-sudo killall packagekit # whichever it is 
 sudo zypper rm --clean-deps PackageKit
 # TODO is this enough to prevent it from ever being reinstalled as a dep?
 sudo zypper addlock PackageKit
@@ -35,7 +32,6 @@ sudo zypper refresh
 echo " Add microsoft's repos..."
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo zypper addrepo https://packages.microsoft.com/yumrepos/vscode vscode
-sudo zypper addrepo https://packages.microsoft.com/yumrepos/ms-teams/ ms-teams
 sudo zypper refresh
 
 # Add GitHub's own RPM repo
@@ -50,7 +46,7 @@ opi codecs
 
 
 # packages to install from official and newly added repos
-packages="htop gparted hardinfo wine winetricks lutris vlc code teams gcc git gh helix"
+packages="htop gparted hardinfo wine winetricks lutris vlc code gcc git gh helix"
 sudo zypper in $packages
 
 # add rustup / cargo 
