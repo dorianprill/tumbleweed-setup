@@ -10,8 +10,11 @@ sudo zypper rm --clean-deps PackageKit
 sudo zypper addlock PackageKit
 
 # for future reference (when packagekit gets better), just disable auto updates
-# sudo sed -i '/^CheckUpdates=/s/=.*$/=false/' /etc/PackageKit/PackageKit.conf && sudo systemctl restart packagekit
-# also disable auto update in gnome software
+#sudo sed -i '/^CheckUpdates=/s/=.*$/=false/' /etc/PackageKit/PackageKit.conf && sudo systemctl restart packagekit
+# also disable auto update and their notifications in gnome software
+gsettings set org.gnome.software download-updates false
+gsettings set org.gnome.software download-updates-notify false
+
 
 # disable optional dependencies by default, heck that's why they're called OPTIONAL
 echo "Disable optional dependencies by default..."
