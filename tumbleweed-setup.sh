@@ -9,6 +9,10 @@ sudo zypper rm --clean-deps PackageKit
 # TODO is this enough to prevent it from ever being reinstalled as a dep?
 sudo zypper addlock PackageKit
 
+# for future reference (when packagekit gets better), just disable auto updates
+# sudo sed -i '/^CheckUpdates=/s/=.*$/=false/' /etc/PackageKit/PackageKit.conf && sudo systemctl restart packagekit
+# also disable auto update in gnome software
+
 # disable optional dependencies by default, heck that's why they're called OPTIONAL
 echo "Disable optional dependencies by default..."
 sudo sed -i 's/# solver.onlyRequires = false/solver.onlyRequires = true/g' /etc/zypp/zypp.conf
