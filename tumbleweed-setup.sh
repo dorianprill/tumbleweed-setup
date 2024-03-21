@@ -58,7 +58,7 @@ packages_av="vlc"
 packages_programming="gcc clang lldb git gh helix code"
 packages_tools="inkscape xournalpp"
 packages_compat="wine winetricks lutris"
-packages_tex="texlive texlive-latexmk texlive-xelatex-dev texlive-pgf texlive-biblatex texlive-biber texlive-beamer texlive-beamertheme-metropolis texlive-fira texlive-firamath texlive-listings texlive-listingsutf8 texlive-csquotes texlive-multirow texlive-tcolorbox texlive-babel-german texlive-german texlive-datetime2 texlive-datetime2-english texlive-datetime2-german texlive-fancyhdr texlive-xifthen texlive-enumitem texlive-comment texlive-lcg"
+packages_tex="texlive texlive-latexmk texlive-xelatex-dev texlive-pgf texlive-biblatex texlive-biber texlive-beamer texlive-beamertheme-metropolis texlive-fira texlive-firamath texlive-listings texlive-listingsutf8 texlive-csquotes texlive-multirow texlive-tcolorbox texlive-babel-german texlive-german texlive-datetime2 texlive-datetime2-english texlive-datetime2-german texlive-fancyhdr texlive-xifthen texlive-enumitem texlive-comment texlive-lcg texlive-fira texlive-firamath fira-code-fonts"
 packages="$packages_sys $packages_av $packages_programming $packages_tools $packages_compat $packages_tex"
 sudo zypper in $packages
 
