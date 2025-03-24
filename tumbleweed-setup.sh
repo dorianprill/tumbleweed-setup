@@ -53,9 +53,9 @@ opi codecs
 
 
 # packages to install from official and newly added repos
-packages_sys="htop gparted hardinfo flatpak"
+packages_sys="htop zellij alacritty gparted hardinfo flatpak"
 packages_av="vlc"
-packages_programming="gcc clang lldb git gh helix code"
+packages_programming="gcc clang lldb git gh helix code zed"
 packages_tools="inkscape xournalpp"
 packages_compat="wine winetricks lutris"
 packages_tex="texlive texlive-latexmk texlive-xelatex-dev texlive-luatex texlive-luacode texlive-pgf texlive-biblatex texlive-biber texlive-beamer texlive-beamertheme-metropolis texlive-fira texlive-firamath fira-code-fonts texlive-listings texlive-listingsutf8 texlive-csquotes texlive-multirow texlive-tcolorbox texlive-babel-german texlive-german texlive-datetime2 texlive-datetime2-english texlive-datetime2-german texlive-fancyhdr texlive-xifthen texlive-enumitem texlive-comment texlive-lcg texlive-epstopdf"
